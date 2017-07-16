@@ -1,0 +1,14 @@
+<script language="javascript">
+
+//方法
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+	 //decodeURIComponent
+}
+ 
+// 调用方法
+document.write("提交的user的值是"+GetQueryString("username"));
+</script>
